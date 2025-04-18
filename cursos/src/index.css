@@ -1,0 +1,77 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+}
+
+.divnav {
+  background-color: #0f079d;
+  color: white;
+  text-align: center;
+}
+
+.divnav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.divnav a {
+  color: white;
+  text-decoration: none;
+}
+
+.divnav a:hover {
+  color: #1fbc11;
+}
+
+.divcursos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  width: 100%;
+  color: rgb(38, 14, 191);
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.curso {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+.divbotones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.divbotones button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.divbotones button:hover {
+  background-color: #0056b3;
+}
+
+
+.desactivado {
+  filter: grayscale(1);
+}
+
+.boton.bgRojo {
+  background-color: #fa0202;
+}
