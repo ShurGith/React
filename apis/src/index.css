@@ -1,6 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
+}
+body {
+background-color: #0c0340;
+  color: #d7d7d7;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -19,31 +31,68 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 70%;
+  width: 85%;
   margin: 0 auto;
-}
-.liCriptos:first-child{
-  border-top: 3px solid #0781fb;
-}
-.liCriptos:last-child{
-  border-bottom: 3px solid #0781fb;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 .liCriptos{
   display: flex;
-  justify-content: start;
-  align-items: center;
-  border:3px solid #0781fb;
-  border-top: transparent;
-  border-bottom: 1px solid #0781fb;
-  padding-left: 40px;
-  gap: 20px;
-  border-radius: 12px;;
+  flex-direction: column;
+  align-items: start;
+  border: 1px solid #0781fb;
+  border-left: 12px solid #0781fb;
+  border-radius: 5px;
+  padding: 10px 0px 10px 80px;
+  box-shadow: #ffffff 0px 0px 5px;
 }
 .nombre,
 .precio,
 .web,
+.variacion,
 .rank{
   display: flex;
   justify-content: center;
+  align-items: center; 
+  gap:12px;
+}
+.nombre{
+  font-size: 2.5rem;
+}
+.web{
+  font-size: 1rem;
+ 
+}
+.web a{
+  display: flex;
   align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #9dee67;
+  & svg{
+    width: 25px;
+    height: 25px;
+  }
+}
+.precio{
+  font-size: 1rem;
+  gap: 10px;
+  color: #0781fb;
+}
+.variacion span{
+  padding: 2px 5px;  
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+.red{
+  background-color: #c30202;
+}
+.green{
+  background-color: #126104;
+}
+.rank{
+  font-size: 0.8rem;
+  color: #0781fb;
 }

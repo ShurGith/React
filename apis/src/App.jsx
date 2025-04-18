@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
+import IcoNavigation from "./IcoNavigation.jsx"
 import axios from "axios"
 
 function App() {
   const apiKey = import.meta.env.VITE_API_KEY
   const options = "assets/"
-  const cantidades = "&offset=20&limit=20"
+  const cantidades = "&offset=0&limit=21"
   const apiUrl = import.meta.env.VITE_API_URL + options + "?apiKey=" + apiKey + cantidades
 
   const [criptos, setCriptos] = useState()
@@ -24,14 +25,16 @@ function App() {
   return (
     <>
       <h1>Lista de Critpomoedas</h1>
-      <h2>Estado de la peticion: {datos}</h2>
+      <h4>Estado de la peticion: {datos}</h4>
       <ul>
-        {criptos && criptos.map(({ name, priceUsd, id, symbol, explorer, rank }) => (
+        {criptos && criptos.map(({ name, priceUsd, id, symbol, explorer, rank, changePercent24Hr }) => (
           <li key={id} className="liCriptos">
             <div className="rank"> <h5>Rank: {rank}</h5></div>
-            <div className="nombre"> Nombre:<h5>{name}</h5></div>
-            <div className="precio"><h5>Precio: </h5>{priceUsd}</div>
-            <div className="web"><h5>Web:</h5><a href={explorer} target="_blank"> {symbol} </a></div>
+            <div className="nombre"><h5>{name}</h5></div>
+            <div className="precio"><h5>Precio: </h5>$ {parseFloat(priceUsd).toFixed(3)}
+              <div className="variacion"><span className={Number(changePercent24Hr) > 0 ? "green" : "red"}> {parseFloat(changePercent24Hr).toFixed(3)} %</span></div>
+            </div>
+            <div className="web"><h5>Web: </h5> <a href={explorer} target="_blank"><IcoNavigation /> {symbol} </a></div>
           </li>
         ))}
       </ul>
