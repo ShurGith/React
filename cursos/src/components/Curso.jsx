@@ -1,30 +1,35 @@
 import { useRef } from "react"
-const Curso = ({ name, text, img }) => {
+const Curso = ({ name, text, img, price }) => {
     const miReferencia = useRef()
-    const maniobra = (elemento) => {
-        console.log(elemento)
+    const maniobra = () => {
+        const elemento = miReferencia.current
         const elementos = elemento.querySelectorAll('*:not(.divbotones):not(.boton)');
-        console.log(elementos)
         elementos.forEach(el => el.classList.toggle('desactivado'))
         const elBoton = elemento.querySelector('.boton')
         elBoton.classList.toggle('bgRojo')
-        elBoton.innerText = elBoton.innerText === 'Desactivado' ? "Desactivar" : "Desactivado"
-        // elBoton.innerText = 'desactivado'
+        elBoton.innerText = elBoton.innerText === 'Activar' ? "Desactivar" : "Activar"
+        const botonComprar = elemento.querySelector('.btn-comprar')
+        botonComprar.disabled = !botonComprar.disabled
+        botonComprar.classList.toggle('btn-comprar-disabled')
+    }
+    const alertaComprado = () => {
+        alert("Has Comprado el curso: " + name)
     }
     return (
         <>
             <div ref={miReferencia} className="curso" >
                 <img src={img} alt={name} />
-                <h2>{name}</h2>
+                <h2>{name} <span className="precio">{price}€</span></h2>
                 <p>{text}</p>
                 <div className="divbotones">
-                    <button>Comprar Curso</button>
-                    <button className="boton" onClick={() => {
-                        //    console.log(miReferencia.current)
-                        maniobra(miReferencia.current)
-                        //miReferencia.current.classList.toggle("desactivado");
-                    }}>
-                        Desactivar</button>
+                    <button className="btn-comprar"
+                        onClick={() => { alertaComprado() }}>
+                        Comprar Curso
+                    </button>
+                    <button className="boton"
+                        onClick={() => { maniobra() }}>
+                        Desactivar
+                    </button>
                 </div>
             </div>
         </>

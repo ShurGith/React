@@ -39,6 +39,16 @@
   border: 1px solid #ccc;
 }
 
+.divcursos h2 {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+.divcursos span {
+  font-size: 1rem;
+  color: #b4a203;
+}
 .curso {
   border: 1px solid #ccc;
   padding: 10px;
@@ -67,11 +77,17 @@
   background-color: #0056b3;
 }
 
-
 .desactivado {
   filter: grayscale(1);
 }
 
 .boton.bgRojo {
-  background-color: #fa0202;
+  background-color: #1b6402;
+}
+.boton.bgRojo:hover{
+  background-color: #2a9407ca;
+}
+.btn-comprar-disabled {
+ pointer-events: none;
+  cursor: not-allowed;
 }
