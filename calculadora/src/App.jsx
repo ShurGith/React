@@ -1,5 +1,6 @@
 import Navegacion from "./components/Navegacion"
-import Contador from "./components/Contador"
+import Calculadora from "./components/Calculadora"
+import "./css/styles.css"
 const App = () => {
   return (
     <>
@@ -8,9 +9,9 @@ const App = () => {
           <Navegacion />
         </nav>
       </header>
-      <main className="bg-gray-300">
-        <h1>Contador</h1>
-        <Contador />
+      <main className="bg-gray-300 flex flex-col items-center justify-center p-8">
+        <h1 className="text-3xl font-bold mb-4">Contador</h1>
+        <Calculadora />
       </main>
     </>
   )
