@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import IcoNavigation from "./IcoNavigation.jsx"
+import IcoNavigation from "./IcoNavigation"
 import axios from "axios"
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       .then(data => {
         //  console.log(data)
         setDatos(data.status)
-        console.log(datos)
+        // console.log(datos)
         setCriptos(data.data.data)
       })
       .catch(error => console.log('La petición ha fallado', error))
@@ -24,8 +24,10 @@ function App() {
   if (datos !== 200) return <p>Cargando...</p>
   return (
     <>
-      <h1>Lista de Critpomoedas</h1>
-      <h4>Estado de la peticion: {datos}</h4>
+      <div className="enunciado">
+        <h1>Lista de Critpomoedas</h1>
+        <h4>Estado de la peticion: {datos}</h4>
+      </div>
       <ul>
         {criptos && criptos.map(({ name, priceUsd, id, symbol, explorer, rank, changePercent24Hr }) => (
           <li key={id} className="liCriptos">
