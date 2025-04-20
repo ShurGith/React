@@ -1,10 +1,14 @@
-import './404css.css'
+import './404.css'
+import { useLocation } from 'react-router-dom';
 
-const Pagina40404 = () => {
+const Pagina404 = () => {
+    const location = useLocation();
+    const defaultMessage = <p>Lo sentimos <br />no se ha encontrado la página que estás buscando.</p>
+    const message = location.state?.message || defaultMessage;
     return (
         <>
             <div className="container">
-                <h1 className="text-center mt-5">Página no encontrada</h1>
+                <h1 className="text-center mt-5">{message}</h1>
                 <div className="row">
                     <div className="col-sm-12 col-md-12 mt-5 mb-5">
                         <svg width="100%" height="100%" viewBox="0 0 636 324" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -325,4 +329,4 @@ const Pagina40404 = () => {
         </>
     );
 }
-export default Pagina40404;
+export default Pagina404;

@@ -1,0 +1,93 @@
+
+
+.enunciado {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px 20px 150px;
+  gap: 20px;
+}
+
+.enunciado h1 {
+  font-size: 3.2em;
+}
+
+ul.ulCriptos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.liCriptos {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border: 1px solid #0781fb;
+  border-left: 12px solid #0781fb;
+  border-radius: 5px;
+  padding: 10px 0px 10px 80px;
+  box-shadow: #ffffff 0px 0px 5px;
+}
+
+.cripto-nombre,
+.cripto-precio,
+.cripto-web,
+.cripto-variacion,
+.cripto-rank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.cripto-nombre {
+  font-size: 2.5rem;
+}
+
+.cripto-web {
+  font-size: 1rem;
+
+}
+
+.cripto-web a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #9dee67;
+
+  & svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.cripto-precio {
+  font-size: 1rem;
+  gap: 10px;
+  color: #0781fb;
+}
+
+.cripto-variacion span {
+  padding: 2px 5px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.cripto-red {
+  background-color: #c30202;
+}
+
+.cripto-green {
+  background-color: #126104;
+}
+
+.cripto-rank h5 {
+  font-size: 0.9rem;
+  color: #0775fb;
+}
