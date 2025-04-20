@@ -17,10 +17,16 @@
 .producto-imagenes{
     display: grid;
     grid-template-columns: repeat(8, 1fr);
+    place-content: center;
+    align-items: center;
 }   
 .div-imagen-precio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     grid-column: 4/6;
-    place-items: center;
+    min-height: 650px;
 }
 .producto-imagen{
     width: 100%;

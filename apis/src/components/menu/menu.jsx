@@ -10,7 +10,8 @@ const Menu = () => {
                     <li key={index}>
                         <NavLink className="nav-link" to={enlace.path}>
                             <Icon icon={enlace.icono} width="24" height="24" />
-                            {enlace.label}</NavLink>
+                            {enlace.label}
+                        </NavLink>
                     </li>
                 ))}
             </ul>

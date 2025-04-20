@@ -1,5 +1,4 @@
 import './producto.css';
-//import './productoEfectos.js';
 import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import axios from "axios";
@@ -9,15 +8,12 @@ const Producto = () => {
     const [producto, setProducto] = useState(null)
     const [errorMen, setErrorMen] = useState(false)
     const navigate = useNavigate();
-    //const [isLoading, setIsLoading] = useState(false);
 
     const getProducto = async () => {
         try {
             const response = axios.get(`https://dummyjson.com/products/${id}`)
             const data = await response
             setProducto(data.data)
-            // .catch(error => console.log('La petición ha fallado', error))
-
         } catch (error) {
             setErrorMen(error.status)
             console.log('La petición ha fallado', error.status)
@@ -58,7 +54,6 @@ const Producto = () => {
         MainImage.src = ele;
     }
 
-    //if (error == true) <p>Producto no encontrado</p>;
     return (
         <>
             <div className="producto-container">

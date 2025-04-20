@@ -10,7 +10,7 @@ const Settings = () => {
     }
     return (
         <div className="main-settings">
-            <h1>Settings</h1>
+            <h1 className="title-settings">Settings</h1>
         </div>
     );
 }

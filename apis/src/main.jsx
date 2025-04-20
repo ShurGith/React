@@ -9,6 +9,7 @@ import Tienda from './components/tienda/Tienda.jsx'
 import Entrada from './components/entrada.jsx'
 import Producto from './components/tienda/producto/Producto.jsx'
 import Settings from './components/settings/Settings.jsx'
+import CriptoPage from './components/criptos/CriptoPage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/app' element={<App />} />
         <Route path='/settings' element={<Settings />} />
         <Route path='/producto/:id' element={<Producto />} />
+        <Route path='/criptopage/:id' element={<CriptoPage />} />
         <Route path='*' element={<Pagina404 />} />
         <Route path='/sin-permiso' element={<Pagina403 />} />
       </Route>
