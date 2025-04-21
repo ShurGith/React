@@ -16,9 +16,9 @@ import Blog from './components/blog/blog.jsx'
 
 createRoot(document.getElementById('root')).render(
 
-  <BrowserRouter>
-    <UserProviderWrapper>
-      <BlogProviderWrapper>
+  <BlogProviderWrapper>
+    <BrowserRouter>
+      <UserProviderWrapper>
         <Routes>
           <Route path='/' element={<Entrada />}>
             <Route path='/conexion' element={<Conexion />} />
@@ -32,9 +32,9 @@ createRoot(document.getElementById('root')).render(
             <Route path='/sin-permiso' element={<Pagina403 />} />
           </Route>
         </Routes>
-      </BlogProviderWrapper>
-    </UserProviderWrapper>
-  </BrowserRouter>
+      </UserProviderWrapper>
+    </BrowserRouter>
+  </BlogProviderWrapper>
 
 
 )

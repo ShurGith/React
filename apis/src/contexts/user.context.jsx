@@ -8,10 +8,10 @@ function UserProviderWrapper(props) {
     const [user, setUser] = useState(null);
     const navigate = useNavigate();
     const userData = {
-        name: "JuanJota",
-        email: "H0CtV@example.com",
-        password: "123456",
-        isAdmin: true
+        name: import.meta.env.VITE_USERNAME,
+        email: import.meta.env.VITE_PASSWORD,
+        password: import.meta.env.VITE_USER_EMAIL,
+        isAdmin: import.meta.env.VITE_ISADMIN,
     }
 
     const LoginUser = () => {
@@ -21,12 +21,12 @@ function UserProviderWrapper(props) {
         navigate("/");
     }
     const LogOutUser = () => {
-        setUser(null);
-
         const boton2 = document.querySelector("li.displayNone");
         boton2.classList.remove("displayNone");
-        navigate("/", { replace: true });
-
+        navigate("/");
+        setTimeout(() => {
+            setUser(null);
+        }, 100);
     }
 
 

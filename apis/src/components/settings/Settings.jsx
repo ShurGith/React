@@ -5,9 +5,6 @@ import { UserContext } from '../../contexts/user.context.jsx';
 
 const Settings = () => {
     const { user } = useContext(UserContext);
-    // const [hassAccess, setHasAccess] = useState(false);
-
-
 
     if (!user?.isAdmin) {
         return <Navigate to="/sin-permiso" />;

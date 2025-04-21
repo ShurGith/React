@@ -44,35 +44,87 @@ body {
   display: flex;
   gap: 1rem;
   padding: 6rem 12rem;
-  border:#d7f2b256 1px solid;
   border-radius: 1rem;
   margin-top: 3rem;
 }
 
-.divlogs button {
+
+.divlogs form {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  color: #ffffff;
-  border: #d7f2b2 1px solid;
-  background-color: #5B557B;
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-size: 1.2rem;
-  gap: 15px;
-  transition: color 0.2s ease-in-out;
-  cursor: pointer;
-}
-.divlogs button:hover {
-  background-color: #f6f6f7;
-  color: #000;
+  justify-content: center;
+  padding: 5rem;
+  gap: 1rem;
+  width: 100%;
 }
 
-footer {
+.divlogs form div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+  gap: 2rem
+}
+.divlogs label {
+  font-size: 2rem;
+}
+
+
+.divlogs input {
+  padding: 5px 10px;
+  border: #d7f2b2 1px solid;
+  background-color: #b3b2b9;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #131313;
+}
+
+.divlogs button {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: fit-content;
+  border: #ffffff 1px solid;
+  background-color: #5b557bb9;
+  border-radius: 5px;
+  padding: .5rem 4rem;
+  font-size: 2rem;
+  gap: 3rem;
+  color: #d7d7d7;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.divlogs button svg {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.divlogs button:hover {
+  background-color: #f6f6f7;
+  color: #5b557b;
+}
+.divlogs .message{
+  font-size: 1.5rem;
+  color: #d7d7d7;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   padding: 1rem;
   border-top: 1px solid #d7d7d745;
   background-color: #0316407b;
   color: #d7d7d784;
+  font-size: 1.5rem;
+}
+footer p{
+  font-size: 1.5rem;
+  width: fit-content;
 }

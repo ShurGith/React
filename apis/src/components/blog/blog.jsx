@@ -1,8 +1,11 @@
+import PostCard from './PostCard.jsx';
 import { useEffect, useContext } from 'react';
 import { BlogContext } from '../../contexts/blog.context.jsx';
+
 import './blog.css';
 const Blog = () => {
     const { posts, error, getPosts } = useContext(BlogContext);
+
     useEffect(() => {
         getPosts();
     })
@@ -12,12 +15,11 @@ const Blog = () => {
     if (posts.length === 0) {
         return <div>Loading...</div>;
     }
-    //console.log(posts);
+
+
     const postElements = posts.map((post) => (
-        <div key={post.id} className="post">
-            <h2>{post.title}</h2>
-            <p>{post.body}</p>
-        </div>
+        <PostCard key={post.id} props={{ post }} />
+
     ));
     return (
         <div className="blog-container">
@@ -26,7 +28,6 @@ const Blog = () => {
                 {postElements}
             </div>
         </div>
-        // <div className="blog-container">
     )
 };
 
