@@ -30,7 +30,7 @@ function App() {
 
 
   return (
-    <>
+    <div>
       <div className="enunciado">
         <h1>Lista de Critpomoedas</h1>
         <h4>Estado de la peticion: {datos}</h4>
@@ -48,7 +48,7 @@ function App() {
         ))}
       </ul>
 
-    </>
+    </div>
   )
 }
 

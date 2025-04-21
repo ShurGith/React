@@ -5,39 +5,38 @@
   background: #fff url("./images/textura.jpg?raw=1") repeat 0 0;
   color: #fff;
   height: 80dvh;
+  padding: 5rem 1em;
 }
-
 
 
 .wrapper-403 {
   position: relative;
-  max-width: 1298px;
   height: auto;
-  margin: 2em auto 0 auto;
+  margin: 4rem auto 0 auto;
   background: transparent url("./images/valla.png?raw=1") no-repeat center top 24em;
 }
 
 /* https://www.vecteezy.com/vector-art/237238-dog-family-colored-doodle-drawing */
 .box-403 {
   max-width: 70%;
-  min-height: 600px;
+  min-height: 520px;
   margin: 0 auto;
-  padding: 1em 1em;
   text-align: center;
-  background: transparent url("./images/dogys.jpg?raw=1") no-repeat top 10em center;
+  background: transparent url("../../assets/dogys_noBg.webp") no-repeat top 12rem center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .title-403 {
-  margin: 0 0 1rem 0;
-  font-size: 8em;
+  font-size: 10rem;
   text-shadow: 0 0 6px #8b4d1a;
 }
 
 .text-403 {
-  margin-bottom: 0.5em;
-  font-size: 1.75em;
+  font-size: 2.3em;
   color: #ea8a1a;
-  margin-top: 16em;
+  margin-top: 20rem;
   text-shadow: none;
 }
 
@@ -46,11 +45,13 @@
   font-style: italic;
   text-decoration: none;
   color: #837256;
+  font-size: 1.5rem;
+
 }
 
 .link-403:hover { text-shadow: 0 0 3px #8b4d1a; }
 
-p img { vertical-align: bottom; }
+
 
 @media screen and (max-width: 600px) {
   .wrapper-403 {

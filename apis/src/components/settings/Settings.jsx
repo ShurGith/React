@@ -1,13 +1,18 @@
 import './settings.css';
-import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { UserContext } from '../../contexts/user.context.jsx';
 
 const Settings = () => {
-    const [hassAccess, setHasAccess] = useState(false);
+    const { user } = useContext(UserContext);
+    // const [hassAccess, setHasAccess] = useState(false);
 
-    if (!hassAccess) {
+
+
+    if (!user?.isAdmin) {
         return <Navigate to="/sin-permiso" />;
     }
+
     return (
         <div className="main-settings">
             <h1 className="title-settings">Settings</h1>

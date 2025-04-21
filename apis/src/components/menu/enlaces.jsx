@@ -1,8 +1,18 @@
 const enlaces = [
     {
         label: "Home",
-        path: "/saludo",
+        path: "/",
         icono: "mdi:home",
+    },
+    {
+        label: "Conexión",
+        path: "/conexion",
+        icono: "streamline:login-1-solid",
+    },
+    {
+        label: "Blog",
+        path: "/blog",
+        icono: "fa-solid:blog",
     },
     {
         label: "Tienda",
