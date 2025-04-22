@@ -5,6 +5,11 @@ const enlaces = [
         icono: "mdi:home",
     },
     {
+        label: "Usuarios",
+        path: "/users",
+        icono: "fa:users",
+    },
+    {
         label: "Conexión",
         path: "/conexion",
         icono: "streamline:login-1-solid",

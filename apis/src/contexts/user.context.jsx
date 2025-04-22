@@ -11,7 +11,8 @@ function UserProviderWrapper(props) {
         name: import.meta.env.VITE_USERNAME,
         email: import.meta.env.VITE_PASSWORD,
         password: import.meta.env.VITE_USER_EMAIL,
-        isAdmin: import.meta.env.VITE_ISADMIN,
+        isAdmin: true,
+        //isAdmin: import.meta.env.VITE_ISADMIN,
     }
 
     const LoginUser = () => {

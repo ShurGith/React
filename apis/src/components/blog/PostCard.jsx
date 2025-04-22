@@ -10,12 +10,14 @@ const PostCard = ({ props }) => {
     const { post } = props;
 
     const handleEdit = (id) => {
-        console.log(`Edit post with id: ${id}`);
+        console.log(`Edit post with #postmensaje-: ${id}`);
+        document.querySelector(`#postmensaje-${id}`).innerHTML = `Post Editado successfully: ${id}`;
         // Implement edit functionality here    
     }
     const handleDelete = (id) => {
         console.log(`Delete post with id: ${id}`);
         // Implement delete functionality here
+        document.querySelector(`#postmensaje-${id}`).innerHTML = `Post deleted successfully: ${id}`;
     }
 
     return (
@@ -31,9 +33,11 @@ const PostCard = ({ props }) => {
                         <FaTrashAlt />
                         Delete
                     </button>
+                    <p id={`postmensaje-${post.id}`}></p>
                 </div>
-            )}
-        </div>
+            )
+            }
+        </div >
     )
 }
 export default React.memo(PostCard);

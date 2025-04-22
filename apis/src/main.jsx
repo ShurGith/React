@@ -13,6 +13,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { UserProviderWrapper } from './contexts/user.context.jsx'
 import { BlogProviderWrapper } from './contexts/blog.context.jsx'
 import Blog from './components/blog/blog.jsx'
+import Users from './components/users/Users.jsx'
 
 createRoot(document.getElementById('root')).render(
 
@@ -24,6 +25,7 @@ createRoot(document.getElementById('root')).render(
             <Route path='/conexion' element={<Conexion />} />
             <Route path='/tienda' element={<Tienda />} />
             <Route path='/blog' element={<Blog />} />
+            <Route path='/users' element={<Users />} />
             <Route path='/app' element={<App />} />
             <Route path='/settings' element={<Settings />} />
             <Route path='/producto/:id' element={<Producto />} />
